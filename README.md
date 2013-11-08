@@ -91,6 +91,9 @@ FAULTY_PIPE         randomly close pipes
 FAULTY_PICKLE       intercept and exchange values of IPDL method calls
 FAULTY_SEED         custom seed value
 FAULTY_PROBABILITY  custom probability factor for calling fuzzing functions
+FAULTY_CHILDS       fuzz only child processes
+FAULTY_PARENT       fuzz only content processes
+FAULTY_LARGE_VALUES use large values during the fuzzing
 ```
 
 A bash script is provided to set these variables and to execute Faulty in a convenient way:
