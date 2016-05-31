@@ -44,12 +44,11 @@ mv faulty.fuzzmanager.conf firefox/
 ff_profile_path=$(xvfb-run ./firefox/firefox -CreateProfile faulty-fuzzer | ack "Success: .* at '(.*)/prefs.js'" --output='$1')
 
 # Download and copy custom preferences for Firefox
-wget https://raw.githubusercontent.com/MozillaSecurity/fuzzdata/master/settings/firefox/faulty.js
+wget https://raw.githubusercontent.com/mozillasecurity/faulty/master/faulty.js
 cp faulty.js $(ff_profile_path)/user.js
 
 # Download launcher for Faulty
-wget https://gist.githubusercontent.com/posidron/5abad79cd112dad1ee7b826976581d1d/raw/a7cafc4cad0b1da0385c7d31e146ca285118321f/faulty-rr.sh
+wget https://raw.githubusercontent.com/mozillasecurity/faulty/master/faulty-rr.sh
 chmod a+x faulty-rr.sh
 
-# screen -t faulty -dmS faulty
-while true; do rr record ./faulty-rr.sh "https://www.youtube.com/watch?v=N3UIUZ1EXgs" done
+screen -t faulty -dmS faulty rr record ./faulty-rr.sh "https://www.youtube.com/watch?v=N3UIUZ1EXgs"

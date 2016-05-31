@@ -23,7 +23,7 @@ export FAULTY_PROBABILITY=3000
 export FAULTY_PICKLE=1
 #export FAULTY_PIPE=1
 export FAULTY_PARENT=1
-export FAULTY_CHILDREN=0
+#export FAULTY_CHILDREN=0
 
 FIREFOX="firefox/firefox"
 PROFILE="faulty-fuzzer"

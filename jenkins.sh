@@ -1,4 +1,3 @@
-
 # Download Faulty
 wget https://raw.githubusercontent.com/MozillaSecurity/faulty/master/faulty.v14.diff
 
