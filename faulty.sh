@@ -7,7 +7,7 @@ sudo apt-get --yes --quiet update
 sudo apt-get --yes --quiet build-dep firefox
 
 # Dependencies: general
-sudo apt-get --yes --quiet install ack-grep subversion zip unzip python-dev python-pip python-setuptools
+sudo apt-get --yes --quiet install ack-grep xz-utils subversion zip unzip python-dev python-pip python-setuptools
 
 # Dependencies: rr
 sudo apt-get --yes --quiet install clang git ninja-build ccache cmake g++-multilib gdb pkg-config libz-dev realpath python-pexpect manpages-dev zlib1g-dev
