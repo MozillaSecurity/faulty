@@ -51,4 +51,4 @@ cp faulty.js $(ff_profile_path)/user.js
 wget https://raw.githubusercontent.com/mozillasecurity/faulty/master/faulty-rr.sh
 chmod a+x faulty-rr.sh
 
-screen -t faulty -dmS faulty rr record ./faulty-rr.sh "https://www.youtube.com/watch?v=N3UIUZ1EXgs"
+screen -t faulty -dmS faulty rr ./faulty-rr.sh "https://www.youtube.com/watch?v=N3UIUZ1EXgs"

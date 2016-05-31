@@ -20,4 +20,4 @@ Preferences for Firefox with adjusted IPC settings.
 
 faulty.v*.diff
 ---
-The actual IPC fuzzing patch.
+The actual IPC fuzzing patch applied in `jenkins.sh`.

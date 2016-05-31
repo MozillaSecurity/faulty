@@ -30,10 +30,19 @@ PROFILE="faulty-fuzzer"
 COMMAND="xvfb-run -e /dev/stdout $FIREFOX -P $PROFILE -no-remote $1 -height 300 -width 300"
 TIMEOUT=30
 LOGPATH="$HOME/faulty/"`date +"%Y-%m-%d__%H-%M"`
-
+LOGDATE=`date +"%Y-%m-%d__%H-%M-%S"`
+LOGFILE="$LOGPATH/faulty-session-$LOGDATE.txt"
 mkdir -p $LOGPATH
 
-$COMMAND 2>&1 | tee $LOGPATH/faulty-session-`date +"%Y-%m-%d__%H-%M-%S"`.txt &
+# Run
+$COMMAND 2>&1 | tee $LOGFILE &
 sleep $TIMEOUT
 pkill -f $PROFILE
 pkill -f "/tmp/xvfb-run"
+
+# Package crash results
+XZ_OPT=-9e tar cJf testcase-$LOGDATE.tar.xz /root/.local/share/rr/faulty-rr.sh-0
+mv testcase-$LOGDATE.tar.xz $LOGPATH
+rm -rf /root/.local/share/rr/faulty-rr.sh-0/
+
+# TODO: post $LOGFILE to FuzzManager with accessible link to testcase-$LOGDATE.tar.xz

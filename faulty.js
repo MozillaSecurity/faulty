@@ -234,4 +234,3 @@ user_pref('browser.tabs.remote.autostart.1', true);
 user_pref('browser.tabs.remote.autostart.2', true);
 user_pref("accessibility.ipc_architecture.enabled", true);
 user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
-
