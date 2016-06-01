@@ -14,7 +14,7 @@ allocator_may_return_null=1:\
 strict_init_order=1:\
 fast_unwind_on_fatal=1:\
 strip_path_prefix=/srv/jenkins/jobs/faulty/workspace/"
-export NSPR_LOG_MODULES=gmp:5
+export MOZ_LOG=gmp:5
 export MOZ_IPC_MESSAGE_LOG=1
 
 # Environment: Faulty
