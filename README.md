@@ -10,7 +10,7 @@ faulty.sh
 ---
 UserData script to setup an instance at DigitalOcean which installs `rr`, downloads the other resources and launches the fuzzing task.
 
-faulty-rr.sh
+faulty-rr.py
 ---
 The bot which is spawned by `faulty.sh` to launch Firefox with Faulty and which collects and buckets the test-cases.
 
