@@ -48,7 +48,7 @@ wget https://raw.githubusercontent.com/mozillasecurity/faulty/master/faulty.js
 cp faulty.js $(ff_profile_path)/user.js
 
 # Download launcher for Faulty
-wget https://raw.githubusercontent.com/mozillasecurity/faulty/master/faulty-rr.sh
-chmod a+x faulty-rr.sh
+wget https://raw.githubusercontent.com/MozillaSecurity/faulty/master/faulty-rr.py
+chmod a+x faulty-rr.py
 
-screen -t faulty -dmS faulty rr ./faulty-rr.sh "https://www.youtube.com/watch?v=N3UIUZ1EXgs"
+screen -t faulty -dmS faulty rr ./faulty-rr.py "https://www.youtube.com/watch?v=N3UIUZ1EXgs"
